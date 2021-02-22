@@ -1,0 +1,57 @@
+{
+    "name" : "email",
+    "author" : "z1p",
+    "version" : 2.0,
+    "categories" : ["output"],
+    "description" : "Email SMTP functionality.",
+    "icon" : null,
+    "requirements" : {
+        "jimi_min_version" : null,
+        "jimi_max_version" : null,
+        "plugins" : []
+    },
+    "collections" : {
+
+    },
+    "triggers" : {
+        
+    },
+    "actions" : {
+        "email" : {
+            "display_name" : "email",
+            "className" : "_email",
+            "class_location" : "models.action",
+            "description" : "Send an SMTP email.",
+            "fields" : [
+                { "schema_item" : "to", "schema_value" : "to", "type" : "input", "label" : "to", "description" : "Who the email is to. Multiple values can be separated by a comma.", "required" : true, "jimi_syntax" : false },
+                { "schema_item" : "sender", "schema_value" : "sender", "type" : "input", "label" : "sender", "description" : "Who the email is from.", "required" : true, "jimi_syntax" : false },
+                { "schema_item" : "host", "schema_value" : "host", "type" : "input", "label" : "host", "description" : "SMTP server to use to send the email.", "required" : true, "jimi_syntax" : false },
+                { "schema_item" : "subject", "schema_value" : "subject", "type" : "input", "label" : "subject", "description" : "Email subject.", "required" : true, "jimi_syntax" : true },
+                { "schema_item" : "body", "schema_value" : "body", "type" : "input", "label" : "body", "description" : "Email body.", "required" : true, "jimi_syntax" : true },
+                { "schema_item" : "html", "schema_value" : "html", "type" : "checkbox", "label" : "html", "description" : "When True the body is sent as HTML.", "required" : true, "jimi_syntax" : false }
+            ],
+            "data_out" : {
+                "result" : { 
+                    "description" : "Returns True if the email was sent successfully.",
+                    "type" : "boolean",
+                    "always_present" : true,
+                    "values" : {
+                        "True" : { "description" : "Email sent." },
+                        "False" : { "description" : "Email was not sent." }
+                    }
+                },
+                "rc" : {
+                    "description" : "Returns the exit code for the action.",
+                    "type" : "number",
+                    "always_present" : true,
+                    "values" : {
+                        "0" : { "description" : "Email sent." }
+                    }
+                }
+            }
+        }
+    },
+    "settings" : {
+
+    }
+}
