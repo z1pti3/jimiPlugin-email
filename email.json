@@ -1,6 +1,6 @@
 {
     "name" : "email",
-    "author" : "z1p",
+    "author" : "z1p, TerrifiedBug",
     "version" : 2.1,
     "categories" : ["output"],
     "description" : "Email SMTP functionality.",
