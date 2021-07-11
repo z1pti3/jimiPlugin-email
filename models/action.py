@@ -29,7 +29,6 @@ class _email(action._action):
 		msg['Subject'] = subject
 		msg['From'] = self.sender
 		msg['To'] = self.to
-		print(password)
 		if password != "":		
 			self.sendEmailAuth(msg, smtplib.SMTP(self.host, self.port), self.sender, password)
 		else:
