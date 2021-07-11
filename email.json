@@ -29,7 +29,7 @@
                 { "schema_item" : "subject", "schema_value" : "subject", "type" : "input", "label" : "subject", "description" : "Email subject.", "required" : true, "jimi_syntax" : true },
                 { "schema_item" : "body", "schema_value" : "body", "type" : "input", "label" : "body", "description" : "Email body.", "required" : true, "jimi_syntax" : true },
                 { "schema_item" : "html", "schema_value" : "html", "type" : "checkbox", "label" : "html", "description" : "When True the body is sent as HTML.", "required" : true, "jimi_syntax" : false },
-                { "schema_item" : "password", "schema_value" : "password", "type" : "input", "label" : "password", "description" : "Password for authentication to mailbox. If using 2SV use an App Password", "required" : true, "jimi_syntax" : true },
+                { "schema_item" : "password", "schema_value" : "password", "type" : "input", "label" : "password", "description" : "Password for authentication to mailbox. If using 2SV use an App Password", "required" : false, "jimi_syntax" : true },
                 { "schema_item" : "port", "schema_value" : "port", "type" : "input", "label" : "port", "description" : "SMTP Port. 25 is default for relaying. Email Submission use 587/465.", "required" : true, "jimi_syntax" : true }
             ],
             "data_out" : {
