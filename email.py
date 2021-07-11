@@ -1,7 +1,7 @@
 from core import plugin, model
 
 class _email(plugin._plugin):
-    version = 2.0
+    version = 2.1
 
     def install(self):
         # Register models
